@@ -27,13 +27,14 @@ describe 'A die' do
 
   describe 'face value' do
     it 'has a face value of 1 by default' do
-      skip
+      die = Die.new
+      expect(die.face_value).to eq(1)
     end
   end
 
   describe '#to_s string representation' do
-    it 'TODO' do
-      skip
+    it 'shows its face value when printed' do
+      expect(Die.new.to_s).to eq("1")
     end
   end
 
