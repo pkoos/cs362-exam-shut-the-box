@@ -16,26 +16,11 @@ describe 'A tile set' do
     end
 
     it 'returns an array of tiles whose values increase from 1, by 1' do
-      counter = 0
-      value=counter + 1
-      max_value = 9
-      tileset = TileSet.generate
-
-      tile = tileset[counter]
-      expect(tile.value).to eq(value)
       
-      counter += 1
-      value += 1
-      tile = tileset[counter]
-      expect(tile.value).to eq(value)
-
-      counter += 6
-      value += 6
-      tile = tileset[counter]
-      expect(tile.value).to eq(value)
-
-      last_tile = tileset[-1]
-      expect(last_tile.value).to eq(max_value)
+      (1..9).each { |n| 
+      tile = TileSet.generate[n-1]
+      expect(tile.value).to eq(n)
+    }
       
     end
 
