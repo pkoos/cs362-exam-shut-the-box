@@ -4,14 +4,17 @@ describe 'A box' do
 
   describe 'attributes' do
     it 'has tiles' do
-      skip
+      box = Box.new
+      expect(box.tiles).to be_truthy
     end
   end
 
   describe 'creation' do
     context 'by default' do
       it 'will initialize an array of tiles' do
-        skip
+        box = Box.new
+        expect(box.tiles).to be_a(Array)
+        expect(box.tiles[0]).to be_a(Tile)
       end
     end
     context 'with a specific array of tiles' do
